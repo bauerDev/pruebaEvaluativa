@@ -3,10 +3,95 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+
+    <!-- Leaflet -->
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div></div>
+
+
+    <!-- Navbar -->
+    
+    <nav class="navbar navbar-info bg-primary text-light">
+      <div class="container">
+        <a class="navbar-brand fs-1 text-light" href="/">Monumentos de Málaga</a>
+
+        <div class="d-flex gap-2">
+          <button id="login-btn" class="btn bg-secondary text-light border-0 rounded px-3 py-2 shadow-sm hover-dark" data-bs-toggle="modal" data-bs-target="#loginModal"
+          style="transition: all 0.3s ease;">
+            Login
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal Login -->
+     
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="username" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="username" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" required>
+              </div>
+              <div class="modal-buttons d-flex justify-content-end gap-2 align-items-right">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <!-- Mapa Leaflet -->
+
+    <main class="flex-grow-1">
+        <div id="map" class="w-100" style="height: 85vh; min-height: 500px;"></div>
+    </main>
+
+  
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-4 mt-auto">
+      <div class="container-fluid px-4 px-lg-5 text-center">
+            <small>Realizado por: Rocío Escudero Martín - 2º DAW - Málaga</small>
+      </div>
+    </footer>
+
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <!-- Bootstrap JS (incluye Popper para modales) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script src="/js/app.js"></script>
+
+
   </body>
 </html>
