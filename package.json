@@ -1,0 +1,22 @@
+{
+  "name": "pruebaevaluativa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bauerDev/pruebaEvaluativa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bauerDev/pruebaEvaluativa/issues"
+  },
+  "homepage": "https://github.com/bauerDev/pruebaEvaluativa#readme",
+  "description": "",
+  "dependencies": {
+    "express-generator": "^4.16.1"
+  }
+}
